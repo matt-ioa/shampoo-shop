@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>Slim 4</title>
+    <meta charset="UTF-8">
+
     <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <style>
         body {
@@ -24,10 +24,18 @@
             margin-bottom: 0;
         }
     </style>
+    <title>Title</title>
 </head>
 <body>
-<h1>Superdrug</h1>
-<div>Welcome to Superdrug!</div>
-    <p>Go <a href="/shampoos">here</a> for a list of our shampoos</p>
+<h2>Shampoo detail</h2>
+<?php
+echo '<h3>' . $shampoo['brand'] . '</h3>';
+echo '<p>' . $shampoo['variant'] . '</p>';
+echo '<p>' . $shampoo['hair_type'] . '</p>';
+echo '<p>' . $shampoo['size'] . '</p>';
+echo '<p>' . $shampoo['scent'] . '</p>';
+echo '<p>' . $shampoo['ingredient'] . '</p>';
+echo '<p>£' . $shampoo['price'] . '</p>';
+?>
 </body>
 </html>

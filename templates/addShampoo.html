@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            margin: 50px 0 0 0;
+            padding: 0;
+            width: 100%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #719e40;
+            letter-spacing: -3px;
+            font-family: 'Lato', sans-serif;
+            font-size: 100px;
+            font-weight: 200;
+            margin-bottom: 0;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<h2>Add new shampoo</h2>
+<form action="/shampoos/add" method="post">
+    <label for="brand">Brand:</label>
+    <input id="brand" type="text" name="brand">
+    <br>
+    <label for="variant">Variant:</label>
+    <input id="variant" type="text" name="variant">
+    <br>
+    <label for="scent">Scent</label>
+    <input id="scent" type="text" name="scent">
+    <br>
+    <label for="hair_type">Hair type:</label>
+    <input id="hair_type" type="text" name="hair_type">
+    <br>
+    <label for="price">Price:</label>
+    <input id="price" type="text" name="price">
+    <br>
+    <input type="submit" value="Add the shampoo"/>
+</form>
+</body>
+</html>

@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-use App\Controllers\CoursesAPIController;
+use App\Controllers\AddShampooController;
+use App\Controllers\ShampooController;
+use App\Controllers\ShampoosController;
 use Slim\App;
 use Slim\Views\PhpRenderer;
 use Slim\Interfaces\RouteCollectorProxyInterface as Group;
@@ -16,6 +18,8 @@ return function (App $app) {
         return $renderer->render($response, "index.php", $args);
     });
 
-    $app->get('/courses', CoursesAPIController::class);
-
+    $app->get('/shampoos', ShampoosController::class);
+    $app->get('/shampoos/add', AddShampooController::class);
+    $app->post('/shampoos/add', AddShampooController::class);
+    $app->get('/shampoos/{id}', ShampooController::class);
 };
